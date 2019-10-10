@@ -73,11 +73,13 @@ def create_shot_dataframe(jsons, inpath, savepath):
     shot_player = [shot['player']['name'] for shot in total_shots]
     # shot teams
     shot_team = [shot['team']['name'] for shot in total_shots]
+    # statsbomb xg
+    xg = [shot['shot']['statsbomb_xg'] for shot in total_shots]
 
     shots_df = pd.DataFrame({'outcome': shot_outcomes, 'body_part': shot_body,
              'technique': shot_technique, 'play_type': shot_type,
              'shot_location_start': shot_location_start, 'player': shot_player,
-             'team': shot_team})
+             'statsbomb_xg': xg, 'team': shot_team})
     
     shots_df.to_csv(savepath + os.sep + 'shots_df.csv', index=False)
 
