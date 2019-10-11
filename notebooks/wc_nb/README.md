@@ -5,6 +5,8 @@
 | ------------------------------|--------------------------------------------------------------------------- |
 | **how_to_create_shot_charts** | notebook for making shot charts for any player or team                     |
 | **how_to_create_shot_df**     | notebook for easily parsing shot data from statsbomb world cup jsons       |
+
+
 Follow the steps on `how_to_create_shot_df` first before running the steps of `how_to_create_shot_charts`.
 
 The code for creating shot_charts can be found in `scripts/shot_charts.py` while the code for
